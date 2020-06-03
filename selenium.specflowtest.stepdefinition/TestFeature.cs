@@ -27,16 +27,6 @@ namespace SeleniumWebDriver.Step_Definition
             driver.Close();
 
         }
-
-        [Given(@"Click to view details button should be visible")]
-        public void GivenClickToViewDetailsButtonShouldBeVisible()
-        {
-            ChromeDriver driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://9a2cdb3e.azurewebsites.net/customerlist/");
-            Assert.IsTrue(driver.FindElement(By.XPath("//*[@data-test='1']")).Displayed);
-            Thread.Sleep(4000);
-            driver.Close();
-        }
         [When(@"I click on John Smith ""(.*)"" button")]
         [TestMethod]
         public void WhenIClickOnJohnSmithButton()
